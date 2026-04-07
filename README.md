@@ -1,6 +1,6 @@
 # Battleship Heuristic Solver
 
-![Battleship Heatmap Preview](assets/screenshot.png)
+![Battleship Heatmap Preview](assets/heatmap_preview.png)
 
 A tactical analysis tool for Battleship gameplay, utilizing Probability Density Mapping to determine optimal firing sequences based on remaining fleet data and known cell states.
 
