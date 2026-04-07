@@ -35,13 +35,13 @@ This tool shifts the gameplay from guessing to a Constraint-Satisfaction Problem
 
 ## Setup & Installation
 
-1. Repository klonen: `git clone https://github.com/GaiusJ/Battleship.git`
-2. Abhängigkeiten installieren: `pip install -r requirements.txt`
-3. Solver starten: `python BattleShipSolver.py`
+1. clone repository: `git clone https://github.com/GaiusJ/Battleship.git`
+2. install dependencies: `pip install -r requirements.txt`
+3. start solver: `python BattleShipSolver.py`
 
 ## License & Terms of Use
 
-This is a personal research project.
+This is a academic side project.
 
 - **Personal & Educational Use:** Feel free to explore, learn from, and use this tool for private purposes.
 - **Commercial Use:** Prohibited. If you intend to use this code, the heuristic logic, or any derivatives for commercial purposes or financial gain, please contact me directly for written permission.
