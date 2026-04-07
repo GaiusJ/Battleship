@@ -37,7 +37,7 @@ This tool shifts the gameplay from guessing to a Constraint-Satisfaction Problem
 
 1. Repository klonen: `git clone https://github.com/GaiusJ/Battleship.git`
 2. Abhängigkeiten installieren: `pip install -r requirements.txt`
-3. Solver starten: `python BattleShipSolver.py` (oder wie deine Datei heißt)
+3. Solver starten: `python BattleShipSolver.py`
 
 ## License & Terms of Use
 
