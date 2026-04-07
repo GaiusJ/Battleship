@@ -1,5 +1,7 @@
 # Battleship Heuristic Solver
 
+![Battleship Heatmap Preview](assets/screenshot.png)
+
 A tactical analysis tool for Battleship gameplay, utilizing Probability Density Mapping to determine optimal firing sequences based on remaining fleet data and known cell states.
 
 ## Core Features
@@ -39,3 +41,12 @@ The solver is interactive via mouse events on the Matplotlib canvas:
 ## Methodology Note
 
 This tool shifts the gameplay from guessing to a Constraint-Satisfaction Problem. By visualizing the underlying probability distribution, the user can maximize the expected value of every shot, minimizing the total number of turns required to clear the board.
+
+## Setup & Installation
+
+1. Repository klonen: `git clone https://github.com/GaiusJ/Battleship.git`
+2. Abhängigkeiten installieren: `pip install -r requirements.txt`
+3. Solver starten: `python BattleShipSolver.py` (oder wie deine Datei heißt)
+
+## License
+MIT License - feel free to use and modify.
