@@ -4,19 +4,19 @@ A tactical analysis tool for Battleship gameplay, utilizing Probability Density 
 
 ## Core Features
 
-    Heatmap Generation: Dynamic calculation of ship occupancy probabilities using iterative matrix scanning.
+- Heatmap Generation: Dynamic calculation of ship occupancy probabilities using iterative matrix scanning.
 
-    Constraint Satisfaction: Real-time integration of Hit, Water, and Sunk states to filter valid ship placements.
+- Constraint Satisfaction: Real-time integration of Hit, Water, and Sunk states to filter valid ship placements.
 
-    Automated Sinking Logic: Recursive identification of contiguous hits to transition units to the Sunk state, automatically flagging surrounding perimeters as Water (tactical exclusion).
+- Automated Sinking Logic: Recursive identification of contiguous hits to transition units to the Sunk state, automatically flagging surrounding perimeters as Water (tactical exclusion).
 
-    Weighted Heuristic (Stage 2): Aggressive prioritization of cells that explain existing hits, significantly increasing the precision of follow-up shots.
+- Weighted Heuristic (Stage 2): Aggressive prioritization of cells that explain existing hits, significantly increasing the precision of follow-up shots.
 
 ## Technical Stack
 
-    Language: Python 3.14.3
+- Language: Python 3.14.3
 
-    Libraries: NumPy (high-performance matrix operations), Matplotlib (GUI & data visualization).
+- Libraries: NumPy (high-performance matrix operations), Matplotlib (GUI & data visualization).
 
 ## How the Solver works
 
@@ -30,11 +30,11 @@ A segment is considered valid if no cell within it carries the Water or Sunk sta
 
 The solver is interactive via mouse events on the Matplotlib canvas:
 
-    Left Click: Mark cell as Water (Miss).
+- Left Click: Mark cell as Water (Miss).
 
-    Right Click: Mark cell as Hit.
+- Right Click: Mark cell as Hit.
 
-    Middle Click (Scroll Wheel): Mark a hit as the "Sinking Blow" (triggers the sinking and perimeter-clearance logic).
+- Middle Click (Scroll Wheel): Mark a hit as the "Sinking Blow" (triggers the sinking and perimeter-clearance logic).
 
 ## Methodology Note
 
