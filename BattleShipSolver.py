@@ -137,26 +137,20 @@ class BattleShipSolver:
             print(f"{found_name} sunk! Remaining: {sum(self.ship_count.values())} ships.")
 
     def update_display(self):
-        # 1. Heatmap berechnen (Die eigentliche Logik des Solvers)
         countmap = np.zeros((self.mapsize, self.mapsize), dtype=float)
         for name, count in self.ship_count.items():
             if count > 0:
                 countmap += self.check_probabilities(self.ship_length[name])
 
-        # Heatmap an die Anzeige senden
         self.im.set_data(countmap)
-        # Farbskala anpassen, damit sie nicht bei 0 stagniert
         max_val = np.max(countmap) if np.max(countmap) > 0 else 1
         self.im.set_clim(vmin=0, vmax=max_val)
 
-        # 2. Tabelle updaten
         new_table_data = [[name, count, self.ship_length[name]] for name, count in self.ship_count.items()]
         for row_idx, row_data in enumerate(new_table_data):
             for col_idx, cell_data in enumerate(row_data):
-                # +1 wegen Header-Row
                 self.the_table._cells[(row_idx + 1, col_idx)].get_text().set_text(str(cell_data))
 
-        # 3. Marker updaten (Nur Hit oder Water anzeigen)
         marker_map = {
             "Unknown": "", 
             "Hit": "x", 
@@ -177,12 +171,12 @@ class BattleShipSolver:
             if not (0 <= row < self.mapsize and 0 <= col < self.mapsize):
                 return
             if self.map[row][col] == "Unknown":
-                if event.button == 1: # water
+                if event.button == 1:
                     self.map[row][col] = "Water"
-                elif event.button == 2: # hit sunk
+                elif event.button == 2:
                     self.map[row][col] = "Hit"
                     self.sink_ship(row, col)
-                elif event.button == 3: # hit
+                elif event.button == 3:
                     self.map[row][col] = "Hit"
                 self.update_display()
 
